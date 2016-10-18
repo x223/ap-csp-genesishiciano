@@ -1,0 +1,32 @@
+var strokeColor = 'blue'
+var weight= 3
+  //var MtColor = 
+function setup() {
+  createCanvas(windowWidth, windowHeight);
+}
+
+function draw() {
+  if (mouseIsPressed) {
+    stroke(strokeColor)
+    strokeWeight(weight)
+    line(pmouseX, pmouseY, mouseX, mouseY);
+  }
+
+}
+
+function keyTyped() {
+  if (key === 'b') {
+    strokeColor = 'black';
+  } else if (key === 'r') {
+    strokeColor = '#E32173';
+    weight = 10
+  } else if (key === 'y') {
+    strokeColor = 'yellow';
+    weight = 10
+  } else if (key === 'e') {
+    background(255);
+  } else if (key === '1') {
+    weight= weight +3;
+  }
+
+}
